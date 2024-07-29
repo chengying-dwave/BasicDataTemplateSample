@@ -13,7 +13,7 @@ public class MainWindowViewModel : ViewModelBase
         new Teacher
         {
             FirstName = "Mr.",
-            LastName = "x",
+            LastName = "X",
             Age = 55,
             Sex = Sex.Diverse,
             Subject = "My Favorite Subject"
