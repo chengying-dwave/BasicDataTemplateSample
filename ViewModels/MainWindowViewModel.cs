@@ -15,7 +15,7 @@ public class MainWindowViewModel : ViewModelBase
             FirstName = "Mr.",
             LastName = "x",
             Age = 55,
-            Sex=Sex.Diverse,
+            Sex = Sex.Diverse,
             Subject = "My Favorite Subject"
         },
         new Student
