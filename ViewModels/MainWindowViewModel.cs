@@ -1,9 +1,9 @@
-﻿namespace BasicDataTemplateSample.ViewModels
+﻿using System.Collections.Generic;
+using BasicDataTemplateSample.Models;
+
+namespace BasicDataTemplateSample.ViewModels;
+
+public class MainWindowViewModel : ViewModelBase
 {
-    public class MainWindowViewModel : ViewModelBase
-    {
-#pragma warning disable CA1822 // Mark members as static
-        public string Greeting => "Welcome to Avalonia!";
-#pragma warning restore CA1822 // Mark members as static
-    }
+    public List<Person> People { get; } = new List<Person>();
 }
