@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:model="using:BasicDataTemplateSample.Models"
+        xmlns:view="using:BasicDataTemplateSample.Views"
         xmlns:vm="using:BasicDataTemplateSample.ViewModels"
         Title="BasicDataTemplateSample"
         d:DesignHeight="450"
@@ -44,8 +45,9 @@
         <DataTemplate DataType="model:Student">
             <StackPanel>
                 <TextBlock FontWeight="Bold" Text="{Binding Grade, StringFormat='I am a student in {0}. grade'}" />
-                <!--  We re-use the PersonTemplate here by using DynamicResource  -->
-                <ContentControl Content="{Binding}" ContentTemplate="{DynamicResource My.DataTemplates.Person}" />
+                <!--  We use a UserControl here to display the data  -->
+                <!--  Note: The UserControl will inherit the DataContext, so we don't need to set it explicitly  -->
+                <view:PersonView />
             </StackPanel>
         </DataTemplate>
 
@@ -54,7 +56,8 @@
             <StackPanel>
                 <TextBlock FontWeight="Bold" Text="{Binding Subject, StringFormat='I am a teacher for: &quot;{0}&quot;'}" />
                 <!--  We use a UserControl here to display the data  -->
-                <ContentControl Content="{Binding}" ContentTemplate="{DynamicResource My.DataTemplates.Person}" />
+                <!--  Note: The UserControl will inherit the DataContext, so we don't need to set it explicitly  -->
+                <view:PersonView />
             </StackPanel>
         </DataTemplate>
     </Window.DataTemplates>
