@@ -21,4 +21,9 @@ public class Person
     /// Gets or sets the sex of the person. You can only set this property on init.
     /// </summary>
     public Sex Sex { get; init; }
+
+    public override string ToString()
+    {
+        return $"{FirstName} {LastName} (Age: {Age}, Sex: {Sex})";
+    }
 }
